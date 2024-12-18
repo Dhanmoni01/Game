@@ -1,0 +1,94 @@
+/* Center the container on the page */
+.dice-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  width: fit-content;
+  perspective: 1000px; /* Enable 3D perspective */
+}
+
+/* Style each dice */
+.dice {
+  width: 100px;
+  height: 100px;
+  /*  transition: transform 6s ease-in-out; */
+  transform-style: preserve-3d; /* Ensure 3D effects are rendered properly */
+  position: relative;
+  overflow: hidden;
+}
+
+/* 3D spinning effect 
+.rolling {
+  animation: spin3D 1s ease-in-out;
+}*/
+
+/* Keyframes for 3D spin 
+@keyframes spin3D {
+  0% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  25% {
+    transform: rotateY(90deg) rotateX(45deg);
+  }
+  50% {
+    transform: rotateY(180deg) rotateX(90deg);
+  }
+  75% {
+    transform: rotateY(270deg) rotateX(135deg);
+  }
+  100% {
+    transform: rotateY(360deg) rotateX(180deg);
+  }
+}*/
+
+/* Keyframes for wheel spin */
+
+/* Apply the new animation 
+
+.rolling {
+  animation: spin3D 1s ease-in-out; 
+}*/
+
+.rolling {
+  animation: spinWheel 6s linear infinite; /* Smooth continuous spin */
+}
+
+/* Keyframes for wheel spin */
+@keyframes spinWheel {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    transform: rotateZ(720deg);
+  }
+  50% {
+    transform: rotateZ(1440deg);
+  }
+  75% {
+    transform: rotateZ(2160deg);
+  }
+  100% {
+    transform: rotateZ(2880deg);
+  }
+}
+
+/* Center the button below the dice */
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}

@@ -1,0 +1,113 @@
+/* General Styles */
+.login-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.login-form {
+  display: inline-block;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #d9eafd;
+  width: 100%; /* Default to full width */
+  max-width: 300px; /* Limit maximum width */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.login-form input {
+  display: block;
+  width: 100%; /* Full width for inputs */
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 10px;
+  border: none;
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.login-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%; /* Full width button */
+}
+
+.logout-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /*width: 100%; /* Full width button */
+}
+
+.login-button:hover {
+  background-color: #8eb486;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  font-weight: 600;
+}
+.login-form {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.login-form input:focus {
+  outline: none;
+  border: 1px solid #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+.login-form input,
+.login-form button,
+.logout-button {
+  transition: all 0.3s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .login-form {
+    padding: 15px;
+  }
+
+  .login-form input {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .login-form button,
+  .logout-button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-form {
+    padding: 10px;
+  }
+
+  .login-form input {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .login-form button,
+  .logout-button {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .error-message {
+    font-size: 12px;
+  }
+}
